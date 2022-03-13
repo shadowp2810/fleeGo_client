@@ -30,7 +30,7 @@ export default function Register({ setShowRegister }) {
     <div className="registerContainer">
       <div className="logo">
         <Autorenew className="logoIcon" />
-        <span className="logoIcon">FleeGo</span>
+        <span className="logoIcon">FleaGo</span>
       </div>
       <form onSubmit={handleSubmit}>
         <input autoFocus placeholder="username" ref={usernameRef} />

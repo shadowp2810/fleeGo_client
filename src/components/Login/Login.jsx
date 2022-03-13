@@ -26,7 +26,7 @@ export default function Login({ setShowLogin }) {
     <div className="loginContainer">
       <div className="logo">
         <Autorenew className="logoIcon" />
-        <span className="logoIcon">FleeGo</span>
+        <span className="logoIcon">FleaGo</span>
       </div>
       <form>
         <input
@@ -47,7 +47,7 @@ export default function Login({ setShowLogin }) {
         >
           Login
         </button>
-        {error && <span className="failure">Something went wrong!</span>}
+        {/* {error && <span className="failure">Something went wrong!</span>} */}
       </form>
       <Cancel className="loginCancel" onClick={() => setShowLogin(false)} />
     </div>

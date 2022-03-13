@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import axios from "axios";
-import { Room, QrCode2 } from "@mui/icons-material";
+import { Room, QrCode2, Autorenew } from "@mui/icons-material";
 // import jwt_decode from "jwt-decode";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
@@ -38,6 +38,24 @@ function App() {
     };
     getPins();
   }, []);
+
+  useEffect(() => {
+    if (user) {
+      setShowLogin(false);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (showRegister) {
+      setShowLogin(false);
+    }
+  }, [showRegister]);
+
+  useEffect(() => {
+    if (showLogin) {
+      setShowRegister(false);
+    }
+  }, [showLogin]);
 
   const handleLogout = () => {
     localStorage.setItem("user", null);
@@ -103,6 +121,10 @@ function App() {
         ))}
         {user ? (
           <>
+            <button className="button logoF">
+              <Autorenew className="logoIconF" />
+              <span className="logoIconF">FleaGo</span>
+            </button>
             <button className="button logout" onClick={() => handleLogout()}>
               Log out
             </button>
@@ -111,17 +133,26 @@ function App() {
             </button>
           </>
         ) : (
-          <div className="buttons">
-            <button className="button login" onClick={() => setShowLogin(true)}>
-              Log in
+          <>
+            <button className="button logoF">
+              <Autorenew className="logoIconF" />
+              <span className="logoIconF">FleaGo</span>
             </button>
-            <button
-              className="button register"
-              onClick={() => setShowRegister(true)}
-            >
-              Register
-            </button>
-          </div>
+            <div className="buttons">
+              <button
+                className="button login"
+                onClick={() => setShowLogin(true)}
+              >
+                Log in
+              </button>
+              <button
+                className="button register"
+                onClick={() => setShowRegister(true)}
+              >
+                Register
+              </button>
+            </div>
+          </>
         )}
         {showRegister && <Register setShowRegister={setShowRegister} />}
         {showLogin && <Login setShowLogin={setShowLogin} />}
