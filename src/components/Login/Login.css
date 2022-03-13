@@ -32,6 +32,12 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+#inputID::placeholder {
+  font-size: 20px;
+  color: #7c7878;
+  opacity: 1;
+}
+
 .loginCancel {
   position: absolute;
   top: 3px;
@@ -61,6 +67,7 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: white;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .failure {

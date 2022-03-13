@@ -27,13 +27,21 @@ input {
   font-size: 25px;
 }
 
+#inputID::placeholder {
+  font-size: 20px;
+  color: #7c7878;
+  opacity: 1;
+}
+
 input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 25px;
+  color: rgb(65, 65, 65);
 }
 input::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 20px;
+  color: rgb(73, 73, 73);
 }
 
 .registerCancel {

@@ -32,11 +32,13 @@ export default function Login({ setShowLogin }) {
         <input
           autoFocus
           type="email"
+          id="inputID"
           placeholder="Email address"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
+          id="inputID"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />

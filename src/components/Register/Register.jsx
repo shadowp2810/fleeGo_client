@@ -33,12 +33,23 @@ export default function Register({ setShowRegister }) {
         <span className="logoIcon">FleaGo</span>
       </div>
       <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
-        <input type="email" placeholder="email" ref={emailRef} />
+        <input
+          autoFocus
+          id="inputID"
+          placeholder="Username"
+          ref={usernameRef}
+        />
+        <input
+          type="email"
+          id="inputID"
+          placeholder="Email address"
+          ref={emailRef}
+        />
         <input
           type="password"
           min="6"
-          placeholder="password"
+          id="inputID"
+          placeholder="Password"
           ref={passwordRef}
         />
         <button className="registerBtn" type="submit">
